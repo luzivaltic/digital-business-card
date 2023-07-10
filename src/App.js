@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from "./components/Footer";
+import Info from "./components/info";
+import "./style/style.css";
+import image from "./Vector.png";
 
 function App() {
+  const person = {
+    name: "Laura Smith",
+    job: "Frontend Developer",
+    webUrl: "laurasmith.website",
+    additionInfo: [
+      {
+        header: "About",
+        content: `
+        I am a frontend developer with a particular interest in making
+        things simple and automating daily tasks. I try to keep up with
+        security and best practices, and am always looking for new things
+        to learn.
+        `,
+      },
+      {
+        header: "interest",
+        content: `
+        Food expert. Music scholar. Reader. Internet fanatic. Bacon buff. Entrepreneur. Travel geek. Pop culture ninja. Coffee fanatic.
+        `,
+      },
+    ],
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="card-container">
+        <div className="card">
+          <section className="image">
+            <img src={image} width={"100%"}></img>
+          </section>
+          <Info person={person}/>
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
