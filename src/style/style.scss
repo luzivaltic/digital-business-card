@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.App {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card-container {
+        position: relative;
+        width: 400px;
+        background-color: #23252C;
+        font-size: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #F5F5F5;
+        height: 95vh;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 225px;
+            height: max(90%, 570px);
+            background-color: #1A1B21;  
+            border-radius: 10px;
+            .info {
+                position: relative;
+                width: 80%;
+                left: 50%;
+                transform: translateX(-50%);
+                .personal {
+                    position: relative;
+                    margin-top: 5px;
+                    text-align: center;
+                    h1 {
+                        font-weight: 700;
+                        font-size: 20px;
+                        font-weight: bolder;
+                    }
+                    h3 {
+                        font-size: 14px;
+                        color: #F3BF99;
+                        font-weight: normal;
+                    }
+                    h4 {
+                        font-weight: lighter;
+                    }
+                    .contact {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 15px;
+                        padding: 10px 0px;
+                        button {
+                            font-size: 12px;
+                            font-weight: 700;
+                            padding: 10px 0px;
+                            border-radius: 10px;
+                            border: none;
+
+                        }
+                        button > * {
+                            padding: 0 5px;
+                        }
+                        .linkedin {
+                            background-color: #5093E2;
+                            color: white;
+                        }
+                        margin-bottom: 10px;
+                    }
+                }
+                .personal > * {
+                    margin-bottom: 3px;
+                }
+                .add-info {
+                    font-weight: 200;
+                    header {
+                        font-size: 14px;
+                        font-weight: 700;
+                        margin-bottom: 5px;
+                    }
+                    margin-bottom: 20px;
+                }
+                
+            }
+
+            .footing {
+                flex-grow: 1;
+                background-color: black;            border-top-left-radius: 10px;
+                font-size: 20px;
+                padding: 0px 50px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-top-left-radius: 0px;
+            }
+        }
+    }
+}
+
