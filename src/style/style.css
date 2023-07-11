@@ -25,13 +25,13 @@
   justify-content: center;
   align-items: center;
   color: #F5F5F5;
-  height: 95vh;
+  height: min(700px, 95%);
 }
 .App .card-container .card {
   display: flex;
   flex-direction: column;
   width: 225px;
-  height: max(90%, 570px);
+  height: 560px;
   background-color: #1A1B21;
   border-radius: 10px;
 }
